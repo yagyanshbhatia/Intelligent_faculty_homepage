@@ -1,0 +1,70 @@
+<html>
+<head>
+	<title>
+		Home Page
+	</title>
+	 <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <style type="text/css">
+    	#cards{
+    		float:left;
+    		margin:20px;
+    	}
+    	#cardimage{
+    		max-height: 250px;
+    		height:250px;
+    	}
+        #card1{
+            /*float: right;*/
+        }
+    	body {
+    		/*background-image: url("http://eskipaper.com/images/orange-light-background-1.jpg");*/
+    		background-repeat: no-repeat;
+    	}
+	</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <div align="right">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     <div id="aling">
+     <a href="/login_user/"> <button class="btn btn-outline-success my-2 my-sm-0 " type="submit"  align="right">Login</button></a>
+      <a href="/register/"><button class="btn btn-outline-success my-2 my-sm-0" type="submit"  action="/register/" align="right">Register</button></a>
+     </div>
+  </div>
+  </div>
+</nav>
+<div class="container">
+
+{%  for field in info %}
+<a href="/aboutto/{{field.name}}/">
+<div id="card1">
+    <div class="w3-card-4 w3-margin" id="cards" style="width:30%">
+        <div class="w3-display-container w3-text-white">
+            <img class="card-img-top" src="{{ field.image.url }}" alt="Card image cap" id="cardimage">
+            <div class="w3-xlarge w3-display-bottomleft w3-padding">{{ field.name }}</div>
+        </div>
+        <div class="w3-row">
+            <div class="card-block" align="center">
+            <br/>
+            <div class="w3-container w3-center">
+                <p>{{ field.position }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+</a>
+
+{%  endfor %}
+</div>
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+</html>

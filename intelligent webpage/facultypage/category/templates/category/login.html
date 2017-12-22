@@ -1,0 +1,58 @@
+
+{% load staticfiles %}
+<!DOCTYPE html>
+<html >
+<head>
+
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <title>Login</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<style type="text/css">
+	#login{
+		margin-top:100px;
+	}
+	#mainbody{
+		background-color: #FED8B1;
+	}
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</style>
+</head>
+
+<body>
+  <body id="mainbody">
+<div class="container" id="login">
+	<section id="content">
+		{% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+            {% endif %}
+		<form class="form-horizontal" role="form" action="{% url 'category:login_user'%}" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			<h1>Login Form</h1>
+			<div>
+				<input type="text" placeholder="Username" required="" id="username" name="username"/>
+			</div>
+			<div>
+				<input type="password" placeholder="Password" required="" id="password" name="password"/>
+			</div>
+            <div class="g-recaptcha" data-sitekey="6LeHpTcUAAAAALTXhAOfpl8xLyJKdOsw_ppm-ltS"></div>
+			<div>
+				<input type="submit" value="Log in" />
+				<a href="{% url 'category:home'  %}">Back to Home</a>
+				<a href="{% url 'category:register' %}">Register</a>
+			</div>
+		</form><!-- form -->
+	</section><!-- content -->
+</div><!-- container -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</body>
+  
+    <script  src=href="{% static 'js/index.js' %}"></script>
+
+</body>
+</html>

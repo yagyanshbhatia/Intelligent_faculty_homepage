@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+</head>
+<body>
+<br><br>
+<div class="container" id="con" >
+<form class="form-horizontal" role="form" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+  <div class="form-group row" >
+    <label  class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="name" placeholder="Your name">
+    </div>
+  </div>
+    <div class="form-group row" >
+    <label  class="col-sm-2 col-form-label">Positoin</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="position" placeholder="Your name">
+    </div>
+  </div>
+
+
+    <div class="form-group row" >
+    <label  class="col-sm-2 col-form-label">Department</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="dept" placeholder="Your name">
+    </div>
+
+  </div>
+   <div class="form-group row" >
+    <label  class="col-sm-2 col-form-label">College</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="college" placeholder="Your name">
+    </div>
+  </div>
+   <div class="form-group row" >
+    <label  class="col-sm-2 col-form-label">Image</label>
+    <div class="col-sm-10">
+      <input type="file" class="form-control" name="image" placeholder="Your name">
+    </div>
+  </div>
+
+    <div class="form-group row" >
+    <label  class="col-sm-2 col-form-label">Intro</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="intro" placeholder="Your name">
+    </div>
+  </div>
+    <div class="form-group row" >
+    <label  class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" name="email" placeholder="Your name">
+    </div>
+  </div>
+
+    <div class="form-group row" >
+    <label  class="col-sm-2 col-form-label">Office</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="officeaddress" placeholder="Your name">
+    </div>
+  </div>
+<div class="form-group row" >
+    <label  class="col-sm-2 col-form-label">Telephone</label>
+    <div class="col-sm-10">
+      <input type="number" class="form-control" name="telephone" placeholder="Your name">
+    </div>
+  </div>
+
+
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>
+</div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+</html>

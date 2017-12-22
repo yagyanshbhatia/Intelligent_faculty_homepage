@@ -1,0 +1,6 @@
+{% for field in form %}
+		<p>
+			<label class="control-label col-sm-2" for="song_title">{{ field.label_tag }}</label>
+        	<div class="col-sm-10">{{ field }}</div>
+		</p>
+{% endfor %}
